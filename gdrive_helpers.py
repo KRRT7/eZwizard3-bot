@@ -41,7 +41,7 @@ def load_creds(cred_json_name: str = "credentials.json"):
     creds_file = Path("DO_NOT_DELETE_automatically_generated_gdrive_token.json")
     if creds_file.exists():
         creds = Credentials.from_authorized_user_file(
-            "DO_NOT_DELETE_automatically_generated_gdrive_token.json",
+            creds_file,
             ["https://www.googleapis.com/auth/drive"],
         )
 
